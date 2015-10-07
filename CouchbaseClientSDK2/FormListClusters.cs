@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CouchbaseClientSDK2
 {
-    public partial class Form1 : Form
+    public partial class FormListClusters : Form
     {
-        public Form1()
+        public FormListClusters()
         {
             InitializeComponent();
         }

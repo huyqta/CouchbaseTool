@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ED2F82D5-99E4-41A0-8409-6B12B7A9B4CD}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{EDE141D6-9622-4F3B-85E8-C62962F66E24}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CouchbaseMain</RootNamespace>
-    <AssemblyName>CouchbaseMain</AssemblyName>
+    <RootNamespace>CouchbaseConsole</RootNamespace>
+    <AssemblyName>CouchbaseConsole</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,30 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\Cluster.cs" />
-    <Compile Include="Class1.cs" />
-    <Compile Include="Commons\CouchbaseHttpResponse.cs" />
-    <Compile Include="Commons\CouchbaseGroupApi.cs" />
-    <Compile Include="CouchbaseHttpResponse.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CouchbaseHttpResponse.resx</DependentUpon>
-    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Commons\CouchbaseApi.json" />
-    <None Include="CouchbaseApi.json" />
+    <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="Resources\CouchbaseApi.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CouchbaseHttpResponse.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CouchbaseHttpResponse.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <ProjectReference Include="..\CouchbaseMain\CouchbaseMain.csproj">
+      <Project>{ed2f82d5-99e4-41a0-8409-6b12b7a9b4cd}</Project>
+      <Name>CouchbaseMain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

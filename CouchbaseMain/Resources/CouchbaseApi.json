@@ -1,0 +1,16 @@
+﻿[
+    { "Method": "GET", "Path": "/pools", "Description": "Retrieves cluster information." },
+    { "Method": "GET", "Path": "/pools/default", "Description": "Retrieves cluster details." },
+    { "Method": "POST", "Path": "/controller/addNode", "Description": "Adds nodes to clusters." },
+    { "Method": "POST", "Path": "/node/controller/doJoinCluster", "Description": "Joins nodes into clusters." },
+    { "Method": "POST", "Path": "/controller/ejectNodeentry", "Description": "Removes nodes from clusters." },
+    { "Method": "GET, POST, PUT, DELETE", "Path": "/pools/default/serverGroups", "Description": "Manages rack zone awareness (server groups)." },
+    { "Method": "POST", "Path": "/controller/rebalance", "Description": "Rebalances nodes in a cluster." },
+    { "Method": "GET, POST", "Path": "/internalSettings", "Description": "Manages internal settings. Couchbase Server use only." },
+    { "Method": "GET, POST", "Path": "/settings/maxParallelIndexers", "Description": "Manages parallel indexer configuration. Couchbase Server use only." },
+    { "Method": "GET, POST", "Path": "/settings/autoFailover", "Description": "Manages automatic failover for clusters." },
+    { "Method": "GET, POST", "Path": "/settings/autoFailover/resetCount", "Description": "Resets automatic failover for clusters." },
+    { "Method": "GET, POST", "Path": "/settings/alerts", "Description": "Manages alerts for email notifications." },
+    { "Method": "POST", "Path": "/settings/alerts/testEmail", "Description": "Creates test email for email notifications." },
+    { "Method": "POST", "Path": "/settings/alerts/sendTestEmail", "Description": "Sends test email for email notifications." }
+]
